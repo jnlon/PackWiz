@@ -1,0 +1,159 @@
+* {
+	box-sizing: border-box;
+}
+
+h1 {
+	margin: 0em;
+	text-align: center;
+	padding: 0px;
+	/*padding: 15px 15px 0 15px;*/
+}
+
+html {
+	margin: 4em;
+	margin-bottom: 2em;
+	margin-top: 2em;
+	font-family: "sans";
+}
+
+body {
+	/*padding: 1.8em;*/
+	max-width: 900px;
+	margin: auto;
+}
+
+nav {
+	padding: 9px;
+	text-align: center;
+}
+
+nav a {
+	margin-right: 10px;
+	padding: 5px;
+	font-weight: bold;
+}
+
+em {
+	font-weight: bold;
+	font-style: normal;
+}
+
+a { color: #150078; }
+
+a:hover { color: #0060c7; }
+
+.bold { font-weight: bold; }
+.block { display: block; }
+.center { text-align: center; }
+
+form, th {
+	background-color: #ddd;
+}
+
+form {
+	padding: 1em;
+}
+
+label {
+	font-weight: bold;
+	display: block;
+	margin-bottom: 1em;
+	cursor: pointer;
+}
+
+table {
+    border-collapse: separate;
+	border-spacing: 2px 2px;
+	width: 100%;
+}
+
+td a {
+	display: block;
+	background-color: #f6f6a6;
+	font-weight: bold;
+	padding: 5px;
+}
+
+td a:hover, 
+td.input {
+	background-color: orange;
+}
+
+table tr td,
+table tr th
+{
+	padding: 0px;
+	background-color: beige;
+	height: 24px;
+	/*line-height: 24px;*/
+}
+
+table tr th {
+	background-color: #ddd;
+}
+
+input[type="text"], 
+input[type="email"], 
+input[type="password"] {
+	margin: 3px 0 3px 0;
+	padding: 5px;
+	max-width: 100%;
+}
+
+input[type="checkbox"] {
+	padding: 10px;
+}
+
+td input[type="checkbox"] {
+	padding: 0px;
+	margin: 0px;
+	width: 100%;
+	padding: 5px;
+	/*height: 20px;*/
+	cursor: pointer;
+}
+
+input[type="submit"] {
+	/*padding-left: 2em;
+	padding-right: 2em;*/
+}
+
+.success {
+	font-weight: bold;
+	color: green;
+}
+
+.error {
+	font-weight: bold;
+	color: red;
+}
+
+#upload-progress-bar {
+	background-color: #83e1ff;
+	padding: 10px;
+	display: none;
+	border-right: solid red thick;
+	margin-top: 12px;
+}
+
+.tooltip {
+	cursor: help;
+	text-decoration: underline;
+	text-decoration-style: dotted;
+}
+
+.info-table {
+	width: initial;
+}
+
+.info-table tr td {
+	padding: 2px;
+}
+
+table tr td:nth-child(1) {
+	text-align: center;
+}
+
+.table-checkbox {
+	text-align: center;
+}

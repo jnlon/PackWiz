@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<!--
+		Name: Jasper Hanlon
+		Date: 2019-12-2
+		Purpose: Public Index Page - Show basic app information and link to other pages
+		-->
+
+		<!--
+
+		Project Changelog - Changes vs Submitted Documents
+		===================================================
+
+		Project Plan Document
+		~~~~~~~~~~~~~~~~~~~~~
+		1. A pack name and settings (whether public or private) cannot be
+		   edited, the pack must be deleted and re-created
+
+		2. Database schema changed in the following ways (see db_init.php):
+			- Applied AUTO_INCREMENT to more primary keys
+			- In table 'file', the 'content' field type changed from BLOB to LONGBLOB
+			- Added 'ON DELETE CASCADE' to more fields
+
+		3. There are no confirm dialogs for actions, but rather colourized
+		   status logs inserted into the DOM indicating whether an action was
+		   succesful
+
+		jQuery Integration Document
+		~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		1. jQuery Fade-In animation affects are applied to whole tables
+		   following fetch/refreshes rather than individual packs
+
+		Security Audit Document
+		~~~~~~~~~~~~~~~~~~~~~~~~
+		No significant changes to report
+
+		Notes Relating to Course Requirements
+		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		- XMLHttpRequest was used rather than fetch() for file uploads because
+		  fetch() does not provide file upload progress callbacks. fetch() is used in all
+		  other scenarios involving AJAX
+
+		-->
+
+		<title>[PW] Home</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="main.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	</head>
+	<body>
+		<h1>PackWiz</h1>
+		<nav>
+			<a href="login.php">Login</a>
+			<a href="create.html">Create Account</a>
+			<a href="public.php">Public Packs</a>
+			<a href="index.html">Home</a>
+		</nav>
+
+		<h2>About</h2>
+		<h3>What is this?</h3>
+		<p> PackWiz is an application for storing, retrieving, and managing collections of files on the web.</p>
+		<p>
+			Users manage collections or "packs" of files through PackWiz. Files
+			can be uploaded by registered users and shared to anyone with the
+			link. Packs are managed through the web interface and may be
+			downloaded as a single zip file.
+		</p>
+		<h3>What can I do with it?</h3>
+		<p> PackWiz has a number of uses including: </p>
+		<ul>
+			<li>A personal file storage locker </li>
+			<li>Transferring files between devices</li>
+			<li>Sharing files with friends</li>
+			<li>File backups</li>
+		</ul>
+		<h3>How does it work?</h3>
+		<p> <em>Packs vs Files</em> - Logged-in users have access to a File Library and
+		Pack Library. Files can be uploaded to your file library and packs are
+		created by entering a unique name. Files from your library can be
+		included or excluded from a pack via the Edit Pack page. </p>
+
+		<p>
+		Once a pack has been created and files have been added it can be
+		downloaded as a single zip archive from the Download or Download Preview
+		pages. These page URLs uniquely depend on the pack name, owning user and
+		pack settings, and are accessible from the Pack Library page in your
+		account. Individual files from a pack may also be downloaded from the
+		Download Preview page.
+		</p>
+
+		<p> <em> Packs Contain Files</em> - Packs contain any combination
+		of files uploaded to the File Library. Files can be included or
+		excluded from a pack individually with checkbox controls from the Edit
+		Pack page. A file from your File Library can be present in any number
+		of packs at once.
+		</p>
+
+		<p> <em>Public Packs</em> - Packs can be made "public" on creation.
+		Public packs are listed on the <a href="public.php">Public Packs</a>
+		in the format <em>username/packname</em>. Files in public packs
+		are downloadable and discoverable by anyone.</p>
+
+		<p><em>Private Packs</em> - Packs not marked "public" are considered
+		private. Private packs are unlisted except within your account, and
+		require knowledge of a secret key in order to be downloaded. For private packs,
+		the secret key is embedded in the Download and Download Preview page links.</p>
+
+		<h3>What are its limitations?</h3>
+		<ul>
+			<li>Packs and files have single owners and cannot be managed by multiple user accounts</li>
+			<li>An uploaded file cannot be more than ~4GB or it will be truncated automatically</li>
+			<li>Files cannot be downloaded until they are added to at least one pack</li>
+			<li>Pack and file names must be unique, you cannot have more than one file or pack with a shared name</li>
+			<li>Once a pack has been created it cannot be renamed and settings
+			cannot be changed. To alter a pack delete and re-create it with the correct settings</li>
+		</ul>
+	</body>
+</html>
