@@ -22,6 +22,12 @@ $error_msg_map = array(
 
 // check for error on uploaded file
 $file = $_FILES['file'];
+
+if ($file === null) {
+	$max_upload = max(ini_get('post_max_size'), ini_get('upload_max_filesize'));
+	die(json_encode(['error' => "No file received - maximum upload size is $max_upload"]));
+}
+
 if ($file['error']) {
 	$msg = $error_msg_map[$file['error']];
 	die(json_encode(['error' => $msg]));
