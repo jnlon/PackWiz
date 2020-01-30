@@ -3,6 +3,10 @@
  * Date: 2019-12-2
  * Purpose: Delete a user account if the POSTed password is correct
  */
+
+echo "Account deletion disabled.";
+die();
+
 require('../include/login_required.php');
 require('../include/models/UserDB.php');
 

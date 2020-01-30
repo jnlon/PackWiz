@@ -43,6 +43,9 @@ if (isset($_SESSION['user_id'])) {
 
 			<input type="submit" name="submit" value="Login">
 
+			<h3>Demo Login Credentials</h3>
+			<p>Email: <em>packwiz@null.domain</em> Password: <em>packwiz123</em></p>
+
 		</form>
 	</body>
 </html>

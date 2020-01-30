@@ -4,6 +4,9 @@
  * Purpose: Create a user with the given POSTed credentials
  */
 
+echo "Account creation currently disabled";
+die();
+
 // get form inputs
 $email = filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL);
 $username = filter_input(INPUT_POST, 'username', FILTER_SANITIZE_STRING);
