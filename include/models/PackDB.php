@@ -21,7 +21,7 @@ class PackDB extends DB {
 	 */
 	public function create_pack($pack_name, $owner, $secret_key, $public) {
 		$sql = 'INSERT INTO packs(name, owner, secret_key, public) VALUES(?,?,?,?)';
-		$this->sql_execute($sql, [$pack_name, $owner, $secret_key, $public]);
+		$this->sql_execute($sql, [$pack_name, $owner, $secret_key, ($public ? 1 : 0)]);
 	}
 
 	/**
